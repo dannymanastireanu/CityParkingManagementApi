@@ -50,6 +50,9 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-gradle-plugin:3.0.0")
     implementation("org.springframework.boot:spring-boot-starter-tomcat")
     implementation("org.hibernate:hibernate-core:6.1.5.Final")
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa:3.0.0")
+    implementation("org.postgresql:postgresql:42.5.1")
+    compileOnly("org.projectlombok:lombok:1.18.24")
 }
 
 tasks.getByName<Test>("test") {

@@ -1,19 +1,18 @@
 package com.goosfraba.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.util.List;
 
 @Entity
 @Embeddable
-public record City(
+@Data
+public class City {
     @Id
-    String id,
+    private String id;
     @Column(length = 256)
-    String name,
+    private String name;
     @Column(length = 4)
-    String code,
-    @OneToMany
-    List<ParkingFacilities> parkingFacilities
-) {
+    private String code;
 }
