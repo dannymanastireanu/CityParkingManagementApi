@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "com.goosfraba"
-version = "1.0-SNAPSHOT"
+version = "1.0"
 
 tasks.named<BootJar>("bootJar") {
     archiveClassifier.set("boot")
@@ -49,6 +49,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-autoconfigure:3.0.0")
     implementation("org.springframework.boot:spring-boot-gradle-plugin:3.0.0")
     implementation("org.springframework.boot:spring-boot-starter-tomcat")
+    implementation("org.hibernate:hibernate-core:6.1.5.Final")
 }
 
 tasks.getByName<Test>("test") {
